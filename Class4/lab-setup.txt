@@ -141,6 +141,11 @@ Create ansible.cfg file like below
       remote_user=ansible
       timeout=3000
       
+      [privilege_escalation]
+      become=True
+      become_method=sudo
+      become_user=root
+      become_ask_pass=False
 in hosts file add your servers like below. (static inventory file)
   
 vim hosts
